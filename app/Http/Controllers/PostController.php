@@ -56,6 +56,8 @@ class PostController extends Controller
         // save image
         $path = $request->file('cover-image')->store('images' ,'public');
         $post->cover_image_url = $path;
+        // create uid
+        $post->uid = sha1($post->id);
         // save post
         $success = $post->save();
     	

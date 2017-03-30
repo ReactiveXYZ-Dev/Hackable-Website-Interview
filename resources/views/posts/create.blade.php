@@ -54,7 +54,6 @@
         // upload
         http.post('/posts/create', fd)
             .then(function(res){
-                console.log(res);
                 salert("Success", res.data['message'], 'success');
             })
             .catch(function(res){

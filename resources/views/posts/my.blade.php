@@ -21,7 +21,7 @@
                             <tr>
                                 <td>{{ $post->title }}</td>
                                 <td>{{ $post->created_at }}</td>
-                                <td><a href="{{ url('/posts/'.$post->id.'/show') }}">查看记录</a></td>
+                                <td><a href="{{ url('/posts/'.$post->uid.'/show') }}">查看记录</a></td>
                             </tr>
                         </tbody>
                         @empty
