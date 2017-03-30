@@ -12,6 +12,7 @@ class PostController extends Controller
     	return view('posts.my')->with([
     			'posts' => $request->user()->posts
     		]);
+        
     }
 
     public function showPost(Request $request, Post $post)
