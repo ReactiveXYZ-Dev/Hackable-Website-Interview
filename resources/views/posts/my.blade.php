@@ -9,7 +9,6 @@
 
                 <div class="panel-body">
                     <table class="table table-hover">
-                        @forelse($posts as $post)
                         <thead>
                             <tr>
                                 <th>标题</th>
@@ -17,6 +16,7 @@
                                 <th>操作</th>
                             </tr>
                         </thead>
+                        @forelse($posts as $post)
                         <tbody>
                             <tr>
                                 <td>{{ $post->title }}</td>

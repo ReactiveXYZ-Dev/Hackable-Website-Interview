@@ -12,7 +12,7 @@ class PostController extends Controller
     	return view('posts.my')->with([
     			'posts' => $request->user()->posts
     		]);
-        
+
     }
 
     public function showPost(Request $request, Post $post)
@@ -54,7 +54,7 @@ class PostController extends Controller
                 'content' => $request->content
             ]);
         // save image
-        $path = $request->file('cover-image')->store('images');
+        $path = $request->file('cover-image')->store('images' ,'public');
         $post->cover_image_url = $path;
         // save post
         $success = $post->save();
